@@ -15,11 +15,11 @@ const { NotImplementedError } = require('../lib');
  *
  */
 function isMAC48Address(n) {
-  if (typeof inputString !== 'string') {
+  if (typeof n !== 'string') {
     return false;
   }
   const macPattern = /^[0-9A-Fa-f]{2}(-[0-9A-Fa-f]{2}){5}$/;
-  return macPattern.test(inputString);
+  return macPattern.test(n);
 }
 
 module.exports = {
